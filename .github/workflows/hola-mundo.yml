@@ -1,15 +1,15 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Aprendiendo GitHub Actions
-run-name: ¡Estoy aprendiendo GitHub Actions!
-on: [push]
-jobs:
-  hola-mundo:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Definir variable
-        run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_ENV
-      - name: Correr script
-        run: python hola_mundo.py
+name: Aprendiendo GitHub Actions #Nombre del workflow que aparecerá en la pestaña de Actions en GiHhub
+run-name: ¡Estoy aprendiendo GitHub Actions! #Nombre del run especifico del workflow que aparecerá en la pestaña de Actions en GitHub
+on: [push] #Especifica el trigger o triggers (event)  que pueden hacer iniciar este workflow
+jobs: #Agrupa todos los jobs que correrán en este workflow
+  hola-mundo: #Nombre que identifica al Job y sirve para agrupar sus propiedades y steps. NOTA: el nombre no debe tener espacios!
+    runs-on: ubuntu-latest #Especifica el tipo de runner para este job
+    steps: #Agrupa los steps(pasos) del Job en cuestión
+      - name: Checkout #Identificador del steps
+        uses: actions/checkout@v3 #Indica que action se utilizará. Versión 3 del action checkout
+      - name: Definir variable #Identificador del steps
+        run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_ENV #Indica que comando ejecutar en el runner
+      - name: Correr script #Identificador del steps
+        run: python hola_mundo.py #Indica que comando ejecutar en el runner
