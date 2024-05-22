@@ -26,7 +26,7 @@ on:
 jobs:
   hola-mundo:
     if: ${{ github.event_name != 'workflow_dispatch '}}
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
