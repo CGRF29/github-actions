@@ -12,8 +12,8 @@ on:
     - labeled
   workflow_dispatch:
     inputs:
-      lenguaje_seleccionado:
-        description: 'Lenguaje seleccionado'
+      lenguaje_utilizado:
+        description: 'Lenguaje utilizado'
         default: Python
         required: true
         type: choice
@@ -21,11 +21,11 @@ on:
         - Python
         - JavaScript  
   schedule:
-    - cron: '30 9 * * *'
+    - cron: '30 9 * * *' #Horario UTS
   
 jobs:
   hola-mundo:
-    if: ${{ github.event_name != 'workflow_dispatch '}}
+    if: ${{ github.event_name != 'workflow_dispatch '}} #Se activa si el evento no es workflow_dispatch
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
