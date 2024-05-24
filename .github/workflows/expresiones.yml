@@ -33,7 +33,7 @@ jobs:
         run: echo El lenguaje seleccionado por el "USERNAME" es ${{ inputs.lenguaje_utilizado }} 
     
   Javascript:  
-    if: ${{ inputs.lenguaje_utilizado == 'Javascrpt'}}
+    if: ${{ inputs.lenguaje_utilizado == 'Javascript'}}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
