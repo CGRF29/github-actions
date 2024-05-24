@@ -1,8 +1,3 @@
-"""
-Reto 3: 
-Crea un Workflow File que utilice al menos 3 expresiones de las que vimos
-en clase (bonus si incluyes una función)
-"""
 name: Aprendiendo Expresiones
 run-name: ¡Estoy aprendiendo a usar las diferentes Expresiones!
 on: 
