@@ -3,9 +3,6 @@ run-name: ¡Estoy aprendiendo a usar las diferentes Expresiones!
 on: 
   push:
     branches: ['master']
-    env:
-      continue: true
-      time: 3
   pull_request:
     types: [opened, synchronize]
     branches: ['master','aprendiendo-**']
@@ -23,7 +20,9 @@ on:
         options:
         - Python
         - JavaScript 
-
+env:
+  continue: true
+  time: 3
 jobs:
   Python:
     if: ${{ inputs.lenguaje_utilizado == 'Python'}} 
